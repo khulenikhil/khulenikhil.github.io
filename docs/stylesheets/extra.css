@@ -1,0 +1,135 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap'); */
+
+[data-md-color-scheme="pitchblack"] {
+
+    /* // Default color shades */
+    --md-default-fg-color: hsla(0, 0%, 87%, 0.9);
+    --md-default-fg-color--light: hsla(0, 0%, 100%, 0.54);
+    --md-default-fg-color--lighter: hsla(0, 0%, 100%, 0.32);
+    --md-default-fg-color--lightest: hsla(0, 0%, 100%, 0.07);
+    --md-default-bg-color: rgb(39, 39, 39);
+    --md-default-bg-color--light: hsla(0, 0%, 100%, 0.7);
+    --md-default-bg-color--lighter: hsla(0, 100%, 100%, 0.3);
+    --md-default-bg-color--lightest: hsla(0, 60%, 99%, 0.12);
+
+    /* // Code color shades */
+    --md-code-fg-color: rgb(222, 222, 222);
+    --md-code-bg-color: rgb(72, 72, 72);
+
+    /* // Code highlighting color shades */
+    --md-code-hl-color: hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
+    --md-code-hl-number-color: hsla(0, 67%, 50%, 1);
+    --md-code-hl-special-color: hsla(340, 83%, 47%, 1);
+    --md-code-hl-function-color: hsla(291, 45%, 50%, 1);
+    --md-code-hl-constant-color: hsla(250, 63%, 60%, 1);
+    --md-code-hl-keyword-color: hsla(219, 54%, 51%, 1);
+    --md-code-hl-string-color: hsla(150, 63%, 30%, 1);
+    --md-code-hl-name-color: var(--md-code-fg-color);
+    --md-code-hl-operator-color: var(--md-default-fg-color--light);
+    --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
+    --md-code-hl-comment-color: var(--md-default-fg-color--light);
+    --md-code-hl-generic-color: var(--md-default-fg-color--light);
+    --md-code-hl-variable-color: var(--md-default-fg-color--light);
+
+    /* // Typeset color shades */
+    --md-typeset-color: var(--md-default-fg-color);
+
+    /* // Typeset `a` color shades */
+    --md-typeset-a-color: var(--md-default-fg-color);
+
+    /* // Typeset `mark` color shades */
+    --md-typeset-mark-color: hsla(#{hex2hsl($clr-yellow-a200)}, 0.5);
+
+    /* // Typeset `del` and `ins` color shades */
+    --md-typeset-del-color: hsla(10, 5%, 76%, 0.15);
+    --md-typeset-ins-color: hsla(0, 0%, 74%, 0.15);
+
+    /* // Typeset `kbd` color shades */
+    --md-typeset-kbd-color: rgb(248, 0, 0);
+    --md-typeset-kbd-accent-color: rgb(200, 30, 30);
+    --md-typeset-kbd-border-color: rgb(231, 14, 14);
+
+    /* // Typeset `table` color shades */
+    --md-typeset-table-color: teal;
+
+    /* // Admonition color shades */
+    --md-admonition-fg-color: var(--md-default-fg-color);
+    --md-admonition-bg-color: var(--md-default-bg-color);
+
+    /* // Footer color shades */
+    --md-footer-fg-color: rgb(255, 255, 255);
+    --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
+    --md-footer-fg-color--lighter: hsla(0, 0%, 100%, 0.45);
+    --md-footer-bg-color: hsla(0, 0%, 0%, 0);
+    --md-footer-bg-color--dark: hsla(0, 0%, 0%, 1);
+
+    /* // Shadow depth 1 */
+    --md-shadow-z1: 0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.05),
+    0 0 #{px2rem(1px)} hsla(0, 0%, 0%, 0.1);
+
+    /* // Shadow depth 2 */
+    --md-shadow-z2: 0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.1),
+    0 0 #{px2rem(1px)} hsla(0, 0%, 0%, 0.25);
+
+    /* // Shadow depth 3 */
+    --md-shadow-z3: 0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
+    0 0 #{px2rem(1px)} hsla(0, 0%, 0%, 0.35);
+}
+
+/* Font-face */
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}
+
+
+:root {
+    font-weight: 500 !important;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    font-weight: 600;
+}
+
+td {
+    font-weight: 450;
+}
+
+body>div.md-container>main>div {
+    margin: 1%;
+    padding: 1%;
+    max-width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--md-code-fg-color);
+    outline: 1px solid var(--md-code-fg-color);
+    border-radius: 10px;
+    ;
+}
+
+body>div.md-container>footer>div>div>div>a,
+.md-nav__link {
+    text-decoration: none !important;
+}
+
+a {
+    text-decoration: underline;
+}

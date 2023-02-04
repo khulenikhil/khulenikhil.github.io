@@ -1,0 +1,25 @@
+theme:
+  icon:
+    logo: material/laptop-account
+  features:
+    - header.autohide
+    - content.code.copy
+    - content.code.annotate
+    - announce.dismiss
+    - content.tooltips
+    - navigation.prune
+    - navigation.sections
+  name: material
+  palette:
+    scheme: pitchblack
+    primary: black
+    accent: cyan
+  font:
+    text: Inter
+    code: Roboto Mono
+
+site_name: Nikhil Khule
+extra_css:
+  - stylesheets/extra.css
+
+plugins: []
